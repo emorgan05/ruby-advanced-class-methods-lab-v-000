@@ -47,7 +47,7 @@ class Song
   end
 
   def self.alphabetical
-    @@alphabetical = @@all.sort_by { |name| name }
+    @@alphabetical = @@all.sort_by { |name| name1 <=> name2 }
   end
 
   def self.destroy_all
