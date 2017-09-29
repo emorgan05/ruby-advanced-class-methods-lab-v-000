@@ -53,8 +53,8 @@ class Song
   def self.new_from_filename(filename)
     file_name = filename.split(/\s\-\s|\./)
     song = self.new
-    @artist_name = file_name[0]
-    @name = file_name[1]
+    song.artist_name = file_name[0]
+    song.name = file_name[1]
   end
 
   def self.destroy_all
