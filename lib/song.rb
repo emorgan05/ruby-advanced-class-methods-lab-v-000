@@ -46,12 +46,12 @@ class Song
     self.create_by_name(name)
   end
 
-  def self.alphabetical 
+  def self.alphabetical
     @@alphabetical = @@all.name.sort
   end
-  
+
   def self.destroy_all
     @@all.clear
   end
-  
+
 end
