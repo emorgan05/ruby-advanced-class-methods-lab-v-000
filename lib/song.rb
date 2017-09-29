@@ -28,4 +28,15 @@ class Song
     song.save
     return song
   end
+
+  def self.find_by_name(name)
+    counter = 0
+    while counter < @@all.length
+      if self.all[counter].name = name
+        return song
+      else
+        counter +=1
+      end
+    end
+  end
 end
