@@ -46,9 +46,9 @@ class Song
     end
   end
 
-  #def self.alphabetical
-  #  @@alphabetical = @@all.sort_by { |name| name }
-  #end
+  def self.alphabetical
+    @@all.sort_by { |song| song.name }
+  end
 
   def self.destroy_all
     @@all.clear
