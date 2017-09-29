@@ -55,3 +55,10 @@ class Song
   end
 
 end
+
+song_1 = Song.create_by_name("Lemonade")
+song_2 = Song.create_by_name("Hello")
+song_3 = Song.create_by_name("Blank Space")
+song_4 = Song.create_by_name("Banana Pancake")
+song_5 = Song.create_by_name("Locked Out of Heaven")
+Song.alphabetical
