@@ -50,6 +50,13 @@ class Song
     @@all.sort_by { |song| song.name }
   end
 
+  def self.new_from_filename(filename)
+    song = self.new
+    file_name = filename.split(/\-|\./)
+    @artist_name = file_name[0]
+    @name = file_name[1]
+  end
+  
   def self.destroy_all
     @@all.clear
   end
