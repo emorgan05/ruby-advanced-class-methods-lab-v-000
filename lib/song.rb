@@ -30,24 +30,24 @@ class Song
   end
 
   def self.find_by_name(name)
-    self.all.detect do |song| 
+    self.all.detect do |song|
       song.name = name
     end
     return song
   end
 
-  def self.find_or_create_by_name(name)
-    counter = 0
-    while counter < @@all.length
-      self.find_by_name(name)
-      counter += 1
-    end
-    self.create_by_name(name)
-  end
+  #def self.find_or_create_by_name(name)
+  #  counter = 0
+  #  while counter < @@all.length
+  #    self.find_by_name(name)
+  #    counter += 1
+  #  end
+  #  self.create_by_name(name)
+  #end
 
-  def self.alphabetical
-    @@alphabetical = @@all.sort_by { |name| name }
-  end
+  #def self.alphabetical
+  #  @@alphabetical = @@all.sort_by { |name| name }
+  #end
 
   def self.destroy_all
     @@all.clear
