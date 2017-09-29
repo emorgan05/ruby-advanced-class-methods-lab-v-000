@@ -38,7 +38,12 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
-
+    counter = 0
+    while counter < @@all.length
+      self.find_by_name(name)
+      counter += 1
+    end
+    self.create_by_name(name)
   end
 
 end
